@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.10.8 on win32)" generated="20221031 19:10:04.179" rpa="false" schemaversion="3">
+<suite id="s1" name="Front Office" source="C:\development\robot-scripts\front-office-1\tests\Front_Office.robot">
+<test id="s1-t1" name="Should be able to access &quot;Team&quot; page" line="15">
+<kw name="Begin Web Test" library="CommonWeb" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221031 19:10:04.558" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<msg timestamp="20221031 19:10:05.155" level="DEBUG">POST http://localhost:58450/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}</msg>
+<msg timestamp="20221031 19:10:05.155" level="DEBUG">Starting new HTTP connection (1): localhost:58450</msg>
+<msg timestamp="20221031 19:10:05.811" level="DEBUG">http://localhost:58450 "POST /session HTTP/1.1" 200 778</msg>
+<msg timestamp="20221031 19:10:05.816" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"107.0.5304.63","chrome":{"chromedriverVersion":"107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942})","userDataDir":"C:\\PROGRA~1\\KMSpico\\temp\\scoped_dir2892_1962931193"},"goog:chromeOptions":{"debuggerAddress":"localhost:58453"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:virtualAuthenticators":true},"sessionId":"2f135149497a4c2acd661d8aa08f67a4"}} | headers=HTTPHeaderDict({'Content-Length': '778', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:05.816" level="DEBUG">Finished Request</msg>
+<msg timestamp="20221031 19:10:05.816" level="DEBUG">POST http://localhost:58450/session/2f135149497a4c2acd661d8aa08f67a4/timeouts {"script": 5000}</msg>
+<msg timestamp="20221031 19:10:05.836" level="DEBUG">http://localhost:58450 "POST /session/2f135149497a4c2acd661d8aa08f67a4/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20221031 19:10:05.836" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:05.836" level="DEBUG">Finished Request</msg>
+<msg timestamp="20221031 19:10:05.836" level="DEBUG">POST http://localhost:58450/session/2f135149497a4c2acd661d8aa08f67a4/timeouts {"implicit": 0}</msg>
+<msg timestamp="20221031 19:10:05.836" level="DEBUG">http://localhost:58450 "POST /session/2f135149497a4c2acd661d8aa08f67a4/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20221031 19:10:05.836" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:05.836" level="DEBUG">Finished Request</msg>
+<msg timestamp="20221031 19:10:05.836" level="DEBUG">POST http://localhost:58450/session/2f135149497a4c2acd661d8aa08f67a4/url {"url": "about:blank"}</msg>
+<msg timestamp="20221031 19:10:05.891" level="DEBUG">http://localhost:58450 "POST /session/2f135149497a4c2acd661d8aa08f67a4/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20221031 19:10:05.891" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:05.891" level="DEBUG">Finished Request</msg>
+<msg timestamp="20221031 19:10:05.891" level="DEBUG">Opened browser with session id 2f135149497a4c2acd661d8aa08f67a4.</msg>
+<status status="PASS" starttime="20221031 19:10:04.558" endtime="20221031 19:10:05.891"/>
+</kw>
+<status status="PASS" starttime="20221031 19:10:04.558" endtime="20221031 19:10:05.891"/>
+</kw>
+<kw name="Go to Landing Page" library="FrontOfficeApp">
+<kw name="Navigate To" library="Landing">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221031 19:10:05.901" level="INFO">Opening url 'https://automationplayground.com/front-office/'</msg>
+<msg timestamp="20221031 19:10:05.901" level="DEBUG">POST http://localhost:58450/session/2f135149497a4c2acd661d8aa08f67a4/url {"url": "https://automationplayground.com/front-office/"}</msg>
+<msg timestamp="20221031 19:10:08.202" level="DEBUG">http://localhost:58450 "POST /session/2f135149497a4c2acd661d8aa08f67a4/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20221031 19:10:08.202" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:08.202" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20221031 19:10:05.901" endtime="20221031 19:10:08.202"/>
+</kw>
+<status status="PASS" starttime="20221031 19:10:05.891" endtime="20221031 19:10:08.202"/>
+</kw>
+<kw name="Verify Page Loaded" library="Landing">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${LANDING_NAVIGATION_ELEMENT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<msg timestamp="20221031 19:10:08.202" level="DEBUG">POST http://localhost:58450/session/2f135149497a4c2acd661d8aa08f67a4/elements {"using": "css selector", "value": "[id=\"mainNav\"]"}</msg>
+<msg timestamp="20221031 19:10:08.231" level="DEBUG">http://localhost:58450 "POST /session/2f135149497a4c2acd661d8aa08f67a4/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20221031 19:10:08.231" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"a07ee041-bf94-4741-b75d-35e36faf7552"}]} | headers=HTTPHeaderDict({'Content-Length': '90', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:08.231" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20221031 19:10:08.202" endtime="20221031 19:10:08.231"/>
+</kw>
+<status status="PASS" starttime="20221031 19:10:08.202" endtime="20221031 19:10:08.231"/>
+</kw>
+<status status="PASS" starttime="20221031 19:10:05.891" endtime="20221031 19:10:08.231"/>
+</kw>
+<kw name="Go to &quot;Team&quot; Page" library="FrontOfficeApp">
+<kw name="Select &quot;Team&quot; Page" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOP_NAV_TEAM_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221031 19:10:08.231" level="INFO">Clicking element 'css=#bs-example-navbar-collapse-1 &gt; ul &gt; li:nth-child(5) &gt; a'.</msg>
+<msg timestamp="20221031 19:10:08.231" level="DEBUG">POST http://localhost:58450/session/2f135149497a4c2acd661d8aa08f67a4/elements {"using": "css selector", "value": "#bs-example-navbar-collapse-1 &gt; ul &gt; li:nth-child(5) &gt; a"}</msg>
+<msg timestamp="20221031 19:10:08.240" level="DEBUG">http://localhost:58450 "POST /session/2f135149497a4c2acd661d8aa08f67a4/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20221031 19:10:08.240" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"13bcd709-6603-4b16-9bb2-fda4324ee592"}]} | headers=HTTPHeaderDict({'Content-Length': '90', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:08.240" level="DEBUG">Finished Request</msg>
+<msg timestamp="20221031 19:10:08.240" level="DEBUG">POST http://localhost:58450/session/2f135149497a4c2acd661d8aa08f67a4/element/13bcd709-6603-4b16-9bb2-fda4324ee592/click {"id": "13bcd709-6603-4b16-9bb2-fda4324ee592"}</msg>
+<msg timestamp="20221031 19:10:08.290" level="DEBUG">http://localhost:58450 "POST /session/2f135149497a4c2acd661d8aa08f67a4/element/13bcd709-6603-4b16-9bb2-fda4324ee592/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20221031 19:10:08.290" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:08.290" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20221031 19:10:08.231" endtime="20221031 19:10:08.290"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221031 19:10:11.291" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221031 19:10:08.290" endtime="20221031 19:10:11.291"/>
+</kw>
+<status status="PASS" starttime="20221031 19:10:08.231" endtime="20221031 19:10:11.291"/>
+</kw>
+<kw name="Verify Page Loaded" library="Team">
+<var>${ReturnedInfo}</var>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${TEAM_HEADER_LABEL}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<msg timestamp="20221031 19:10:11.291" level="DEBUG">POST http://localhost:58450/session/2f135149497a4c2acd661d8aa08f67a4/elements {"using": "css selector", "value": "#team &gt; div &gt; div:nth-child(1) &gt; div &gt; h2"}</msg>
+<msg timestamp="20221031 19:10:11.311" level="DEBUG">http://localhost:58450 "POST /session/2f135149497a4c2acd661d8aa08f67a4/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20221031 19:10:11.311" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"c6fda990-262a-4605-89f9-a24ad49cdd84"}]} | headers=HTTPHeaderDict({'Content-Length': '90', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:11.311" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20221031 19:10:11.291" endtime="20221031 19:10:11.311"/>
+</kw>
+<msg timestamp="20221031 19:10:11.311" level="INFO">${ReturnedInfo} = Found it!</msg>
+<status status="PASS" starttime="20221031 19:10:11.291" endtime="20221031 19:10:11.311"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ReturnedInfo}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221031 19:10:11.311" level="INFO">Found it!</msg>
+<status status="PASS" starttime="20221031 19:10:11.311" endtime="20221031 19:10:11.311"/>
+</kw>
+<status status="PASS" starttime="20221031 19:10:08.231" endtime="20221031 19:10:11.311"/>
+</kw>
+<kw name="Do Some Custom Thing" library="FrontOfficeApp">
+<kw name="Do Something Special" library="MyCustomLibrary">
+<msg timestamp="20221031 19:10:11.319" level="INFO">Doing something special!</msg>
+<status status="PASS" starttime="20221031 19:10:11.311" endtime="20221031 19:10:11.319"/>
+</kw>
+<status status="PASS" starttime="20221031 19:10:11.311" endtime="20221031 19:10:11.319"/>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<msg timestamp="20221031 19:10:11.319" level="DEBUG">Closing all browsers.</msg>
+<msg timestamp="20221031 19:10:11.319" level="DEBUG">DELETE http://localhost:58450/session/2f135149497a4c2acd661d8aa08f67a4 {}</msg>
+<msg timestamp="20221031 19:10:11.481" level="DEBUG">http://localhost:58450 "DELETE /session/2f135149497a4c2acd661d8aa08f67a4 HTTP/1.1" 200 14</msg>
+<msg timestamp="20221031 19:10:11.481" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:11.481" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20221031 19:10:11.319" endtime="20221031 19:10:13.611"/>
+</kw>
+<status status="PASS" starttime="20221031 19:10:11.319" endtime="20221031 19:10:13.611"/>
+</kw>
+<doc>This is test 1</doc>
+<tag>search</tag>
+<status status="PASS" starttime="20221031 19:10:04.558" endtime="20221031 19:10:13.611"/>
+</test>
+<test id="s1-t2" name="&quot;Team&quot; page should match requirements" line="22">
+<kw name="Begin Web Test" library="CommonWeb" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221031 19:10:13.619" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<msg timestamp="20221031 19:10:14.135" level="DEBUG">POST http://localhost:58474/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}</msg>
+<msg timestamp="20221031 19:10:14.135" level="DEBUG">Starting new HTTP connection (1): localhost:58474</msg>
+<msg timestamp="20221031 19:10:14.801" level="DEBUG">http://localhost:58474 "POST /session HTTP/1.1" 200 778</msg>
+<msg timestamp="20221031 19:10:14.806" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"107.0.5304.63","chrome":{"chromedriverVersion":"107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942})","userDataDir":"C:\\PROGRA~1\\KMSpico\\temp\\scoped_dir16392_345436683"},"goog:chromeOptions":{"debuggerAddress":"localhost:58477"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:virtualAuthenticators":true},"sessionId":"9412a89a476029531b2f7a5916d5f668"}} | headers=HTTPHeaderDict({'Content-Length': '778', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:14.806" level="DEBUG">Finished Request</msg>
+<msg timestamp="20221031 19:10:14.806" level="DEBUG">POST http://localhost:58474/session/9412a89a476029531b2f7a5916d5f668/timeouts {"script": 5000}</msg>
+<msg timestamp="20221031 19:10:14.806" level="DEBUG">http://localhost:58474 "POST /session/9412a89a476029531b2f7a5916d5f668/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20221031 19:10:14.806" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:14.806" level="DEBUG">Finished Request</msg>
+<msg timestamp="20221031 19:10:14.806" level="DEBUG">POST http://localhost:58474/session/9412a89a476029531b2f7a5916d5f668/timeouts {"implicit": 0}</msg>
+<msg timestamp="20221031 19:10:14.817" level="DEBUG">http://localhost:58474 "POST /session/9412a89a476029531b2f7a5916d5f668/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20221031 19:10:14.821" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:14.822" level="DEBUG">Finished Request</msg>
+<msg timestamp="20221031 19:10:14.822" level="DEBUG">POST http://localhost:58474/session/9412a89a476029531b2f7a5916d5f668/url {"url": "about:blank"}</msg>
+<msg timestamp="20221031 19:10:14.878" level="DEBUG">http://localhost:58474 "POST /session/9412a89a476029531b2f7a5916d5f668/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20221031 19:10:14.878" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:14.878" level="DEBUG">Finished Request</msg>
+<msg timestamp="20221031 19:10:14.878" level="DEBUG">Opened browser with session id 9412a89a476029531b2f7a5916d5f668.</msg>
+<status status="PASS" starttime="20221031 19:10:13.619" endtime="20221031 19:10:14.878"/>
+</kw>
+<status status="PASS" starttime="20221031 19:10:13.619" endtime="20221031 19:10:14.878"/>
+</kw>
+<kw name="Go to Landing Page" library="FrontOfficeApp">
+<kw name="Navigate To" library="Landing">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221031 19:10:14.881" level="INFO">Opening url 'https://automationplayground.com/front-office/'</msg>
+<msg timestamp="20221031 19:10:14.881" level="DEBUG">POST http://localhost:58474/session/9412a89a476029531b2f7a5916d5f668/url {"url": "https://automationplayground.com/front-office/"}</msg>
+<msg timestamp="20221031 19:10:18.211" level="DEBUG">http://localhost:58474 "POST /session/9412a89a476029531b2f7a5916d5f668/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20221031 19:10:18.211" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:18.219" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20221031 19:10:14.881" endtime="20221031 19:10:18.219"/>
+</kw>
+<status status="PASS" starttime="20221031 19:10:14.881" endtime="20221031 19:10:18.219"/>
+</kw>
+<kw name="Verify Page Loaded" library="Landing">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${LANDING_NAVIGATION_ELEMENT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<msg timestamp="20221031 19:10:18.219" level="DEBUG">POST http://localhost:58474/session/9412a89a476029531b2f7a5916d5f668/elements {"using": "css selector", "value": "[id=\"mainNav\"]"}</msg>
+<msg timestamp="20221031 19:10:18.261" level="DEBUG">http://localhost:58474 "POST /session/9412a89a476029531b2f7a5916d5f668/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20221031 19:10:18.261" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"3bf376ef-03f8-4324-93d5-8d2d70a2485b"}]} | headers=HTTPHeaderDict({'Content-Length': '90', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:18.261" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20221031 19:10:18.219" endtime="20221031 19:10:18.261"/>
+</kw>
+<status status="PASS" starttime="20221031 19:10:18.219" endtime="20221031 19:10:18.261"/>
+</kw>
+<status status="PASS" starttime="20221031 19:10:14.878" endtime="20221031 19:10:18.261"/>
+</kw>
+<kw name="Go to &quot;Team&quot; Page" library="FrontOfficeApp">
+<kw name="Select &quot;Team&quot; Page" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TOP_NAV_TEAM_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221031 19:10:18.261" level="INFO">Clicking element 'css=#bs-example-navbar-collapse-1 &gt; ul &gt; li:nth-child(5) &gt; a'.</msg>
+<msg timestamp="20221031 19:10:18.261" level="DEBUG">POST http://localhost:58474/session/9412a89a476029531b2f7a5916d5f668/elements {"using": "css selector", "value": "#bs-example-navbar-collapse-1 &gt; ul &gt; li:nth-child(5) &gt; a"}</msg>
+<msg timestamp="20221031 19:10:18.300" level="DEBUG">http://localhost:58474 "POST /session/9412a89a476029531b2f7a5916d5f668/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20221031 19:10:18.301" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"3c5d9948-b2b1-4a3f-a3e3-4b388f2c80c8"}]} | headers=HTTPHeaderDict({'Content-Length': '90', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:18.301" level="DEBUG">Finished Request</msg>
+<msg timestamp="20221031 19:10:18.301" level="DEBUG">POST http://localhost:58474/session/9412a89a476029531b2f7a5916d5f668/element/3c5d9948-b2b1-4a3f-a3e3-4b388f2c80c8/click {"id": "3c5d9948-b2b1-4a3f-a3e3-4b388f2c80c8"}</msg>
+<msg timestamp="20221031 19:10:18.419" level="DEBUG">http://localhost:58474 "POST /session/9412a89a476029531b2f7a5916d5f668/element/3c5d9948-b2b1-4a3f-a3e3-4b388f2c80c8/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20221031 19:10:18.427" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:18.427" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20221031 19:10:18.261" endtime="20221031 19:10:18.427"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221031 19:10:21.441" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221031 19:10:18.427" endtime="20221031 19:10:21.441"/>
+</kw>
+<status status="PASS" starttime="20221031 19:10:18.261" endtime="20221031 19:10:21.441"/>
+</kw>
+<kw name="Verify Page Loaded" library="Team">
+<var>${ReturnedInfo}</var>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${TEAM_HEADER_LABEL}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<msg timestamp="20221031 19:10:21.441" level="DEBUG">POST http://localhost:58474/session/9412a89a476029531b2f7a5916d5f668/elements {"using": "css selector", "value": "#team &gt; div &gt; div:nth-child(1) &gt; div &gt; h2"}</msg>
+<msg timestamp="20221031 19:10:21.450" level="DEBUG">http://localhost:58474 "POST /session/9412a89a476029531b2f7a5916d5f668/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20221031 19:10:21.450" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"1ab9c330-60f4-4330-9db3-c8504eaf3da1"}]} | headers=HTTPHeaderDict({'Content-Length': '90', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:21.450" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20221031 19:10:21.441" endtime="20221031 19:10:21.450"/>
+</kw>
+<msg timestamp="20221031 19:10:21.450" level="INFO">${ReturnedInfo} = Found it!</msg>
+<status status="PASS" starttime="20221031 19:10:21.441" endtime="20221031 19:10:21.450"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ReturnedInfo}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221031 19:10:21.450" level="INFO">Found it!</msg>
+<status status="PASS" starttime="20221031 19:10:21.450" endtime="20221031 19:10:21.450"/>
+</kw>
+<status status="PASS" starttime="20221031 19:10:18.261" endtime="20221031 19:10:21.450"/>
+</kw>
+<kw name="Validate &quot;Team&quot; Page" library="FrontOfficeApp">
+<kw name="Validate Page Contents" library="Team">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${ElementText}</var>
+<arg>${TEAM_HEADER_LABEL}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221031 19:10:21.450" level="DEBUG">POST http://localhost:58474/session/9412a89a476029531b2f7a5916d5f668/elements {"using": "css selector", "value": "#team &gt; div &gt; div:nth-child(1) &gt; div &gt; h2"}</msg>
+<msg timestamp="20221031 19:10:21.458" level="DEBUG">http://localhost:58474 "POST /session/9412a89a476029531b2f7a5916d5f668/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20221031 19:10:21.458" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"1ab9c330-60f4-4330-9db3-c8504eaf3da1"}]} | headers=HTTPHeaderDict({'Content-Length': '90', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:21.458" level="DEBUG">Finished Request</msg>
+<msg timestamp="20221031 19:10:21.458" level="DEBUG">GET http://localhost:58474/session/9412a89a476029531b2f7a5916d5f668/element/1ab9c330-60f4-4330-9db3-c8504eaf3da1/text {"id": "1ab9c330-60f4-4330-9db3-c8504eaf3da1"}</msg>
+<msg timestamp="20221031 19:10:21.481" level="DEBUG">http://localhost:58474 "GET /session/9412a89a476029531b2f7a5916d5f668/element/1ab9c330-60f4-4330-9db3-c8504eaf3da1/text HTTP/1.1" 200 28</msg>
+<msg timestamp="20221031 19:10:21.481" level="DEBUG">Remote response: status=200 | data={"value":"OUR AMAZING TEAM"} | headers=HTTPHeaderDict({'Content-Length': '28', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:21.481" level="DEBUG">Finished Request</msg>
+<msg timestamp="20221031 19:10:21.481" level="INFO">${ElementText} = OUR AMAZING TEAM</msg>
+<status status="PASS" starttime="20221031 19:10:21.450" endtime="20221031 19:10:21.481"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${ElementText}</arg>
+<arg>Our Amazing Team</arg>
+<arg>ignore_case=true</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20221031 19:10:21.481" level="DEBUG">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20221031 19:10:21.481" endtime="20221031 19:10:21.481"/>
+</kw>
+<status status="PASS" starttime="20221031 19:10:21.450" endtime="20221031 19:10:21.481"/>
+</kw>
+<status status="PASS" starttime="20221031 19:10:21.450" endtime="20221031 19:10:21.481"/>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<msg timestamp="20221031 19:10:21.481" level="DEBUG">Closing all browsers.</msg>
+<msg timestamp="20221031 19:10:21.481" level="DEBUG">DELETE http://localhost:58474/session/9412a89a476029531b2f7a5916d5f668 {}</msg>
+<msg timestamp="20221031 19:10:21.545" level="DEBUG">http://localhost:58474 "DELETE /session/9412a89a476029531b2f7a5916d5f668 HTTP/1.1" 200 14</msg>
+<msg timestamp="20221031 19:10:21.545" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20221031 19:10:21.545" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20221031 19:10:21.481" endtime="20221031 19:10:23.650"/>
+</kw>
+<status status="PASS" starttime="20221031 19:10:21.481" endtime="20221031 19:10:23.650"/>
+</kw>
+<doc>This is test 2</doc>
+<tag>test2</tag>
+<status status="PASS" starttime="20221031 19:10:13.611" endtime="20221031 19:10:23.650"/>
+</test>
+<doc>Talk about what this suite of tests does</doc>
+<status status="PASS" starttime="20221031 19:10:04.187" endtime="20221031 19:10:23.650"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">search</stat>
+<stat pass="1" fail="0" skip="0">test2</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Front Office">Front Office</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
